@@ -1,10 +1,13 @@
 <div class="page__comments">
-
-  {% if site.disqus.shortname %}
+    {% if site.disqus.shortname %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_shortname = '{{ site.disqus.shortname }}';
-      var disqus_url = '{{ site.url }}/{{ page.url }}';
+      var disqus_url = '{{ site.url }}{{ page.url }}'; // Fixed a double slash issue here too
+
+      var disqus_config = function () {
+        this.language = "ja"; // This forces Japanese
+      };
 
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
@@ -13,7 +16,6 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
 
-      /* * * DON'T EDIT BELOW THIS LINE * * */
       (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';
@@ -22,5 +24,5 @@
       }());
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  {% endif %}
+    {% endif %}
 </div>
