@@ -9,11 +9,15 @@
 $heebo                      : Heebo, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei Light", sans-serif;
 $gochi-hand                 : Gochi Hand, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 
-$global-font-family         : $heebo !default;
-$header-font-family         : $heebo !default;
-$fancy-font-family          : $gochi-hand !default;
-$caption-font-family        : $heebo !default;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace !default;
+$japanese-sans: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+
+$japanese-serif: "Georgia", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+
+$global-font-family: $japanese-sans !default;
+$header-font-family: $japanese-sans !default;
+$fancy-font-family: $japanese-serif !default;
+$caption-font-family: $japanese-sans !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* type scale */
 $type-size-1                : 2.441em !default;  // ~39.056px
