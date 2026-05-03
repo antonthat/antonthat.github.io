@@ -1,0 +1,121 @@
+﻿# Site Settings
+encoding                 : "utf-8"
+locale                   : "ja"
+title                    : "名前ないブログ "
+title_separator          : "-"
+description              : "内容は日本語で <sub>und manchmal Deutsch</sub>"
+favicon                  : "/assets/images/cat.png"
+avatar                   : "/assets/images/cat.png"
+url                      : "https://antonthat.github.io/"
+baseurl                  : ""
+
+author:
+  name                   : "ANonym"
+
+comments                 : true
+disqus:
+  shortname              : ANonym
+
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+
+og_image                 : "/assets/images/cat.png"
+
+twitter:
+  username 
+
+analytics:
+  google:
+    tracking_id          : 
+
+
+include:
+  - _pages
+# Files excluded from Jekyll builds
+exclude:
+- README.md
+- LICENSE
+- Gemfile
+- Gemfile.lock
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /blog/:title/
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: "/page:num/"
+  collection: "posts"
+  trail: 
+    before: 2 # The number of links before the current page
+    after: 2  # The number of links after the current page
+
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+collections:
+  poetry:
+    output: true
+    permalink: /:collection/:title/
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-feed
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-feed
+
+
+# Front matter defaults
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      comments: false
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      share: true
+  # _poetry
+  - scope:
+      path: ""
+      type: poetry
+    values:
+      layout: post
+      share: false

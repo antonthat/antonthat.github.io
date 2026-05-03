@@ -1,0 +1,13 @@
+---
+layout: page
+title: Blog
+pagination:
+  enabled: true
+  index: true
+---
+
+{% for post in paginator.posts %}
+	{% include post-entry.html %}
+{% endfor %}
+
+{% include paginator.html %}
