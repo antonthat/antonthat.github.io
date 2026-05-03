@@ -1,10 +1,10 @@
 <div class="page__comments">
-    <div id="cusdis_thread" 
+    <div id="cusdis_thread"
          data-lang="ja"
          data-host="https://cusdis.com"
          data-app-id="0b53e14d-c96b-4024-b732-ad3770237fe5"
-         data-page-id="{{ PAGE_ID }}"
-         data-page-url="{{ PAGE_URL }}"
-         data-page-title="{{ PAGE_TITLE }}"></div>
+         data-page-id="{{ page.url }}"
+         data-page-url="{{ site.url }}{{ page.url }}"
+         data-page-title="{{ page.title }}"></div>
     <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </div>
