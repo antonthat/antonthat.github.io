@@ -6,7 +6,7 @@ title_separator          : "-"
 description              : "内容は日本語で <sub>und manchmal Deutsch</sub>"
 favicon                  : "/assets/images/cat.png"
 avatar                   : "/assets/images/cat.png"
-url                      : "https://antonthat.github.io/"
+url                      : "https://antonthat.github.io"
 baseurl                  : ""
 
 author:
@@ -88,6 +88,7 @@ collections:
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-sitemap
 
 # mimic GitHub Pages with --safe
 whitelist:
